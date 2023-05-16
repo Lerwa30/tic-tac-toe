@@ -6,6 +6,11 @@ function App() {
   const [squares, setSquares] = useState(["", "", "", "", "", "", "", "", ""]);
   const [player, setPlayer] = useState(true);
 
+const handleClick = () => {
+  setSquares(['', '', '', '', '', '', '', '', '']);
+  setPlayer(true);
+}
+
   return (
     <div className="App">
       <div className="container">{squares.map((value, index) => {
@@ -18,6 +23,8 @@ function App() {
         index={index}
       />
       })}</div>
+            <button onClick={handleClick}>Reset</button>
+
     </div>
   );
 }
